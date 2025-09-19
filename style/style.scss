@@ -168,9 +168,6 @@ body {
 
   font-family: MontserratBold;
   min-width: 0px;
-  // временные
-  // border: 4px solid black;
-  // border-radius: $img-border-radius; 
 }
 
 // HEADER
@@ -208,9 +205,6 @@ body {
                         50px);
   }
   @include responsive(tablet) { // 768 - 320
-    // @include logo-style(clamp(6.875rem, -0.625rem + 15.63vw, 9.375rem),
-    //                     clamp(2.188rem, -0.25rem + 5.08vw, 3rem),
-    //                     clamp(1.5rem, 0.339rem + 5.8vw, 3.125rem));
     @include logo-style(clamp(6.875rem, -0.625rem + 15.63vw, 9.375rem),
                         clamp(2.188rem, -0.25rem + 5.08vw, 3rem),
                         0px);
@@ -239,9 +233,6 @@ body {
     // $left, $font-size)
       @include nav-list-style(clamp(2.75rem, -8.688rem + 23.83vw, 6.563rem), 16px);
   }
-  // @include responsive(tablet) { // 768 - 320
-  //   display: none;
-  // }
 }
 .nav-list__item {
     // отступ от каждого пункта меню справа
@@ -250,10 +241,6 @@ body {
   }
   @include responsive(laptop) {
     margin-inline-end: clamp(2.5rem, -1.25rem + 7.81vw, 3.75rem);
-  }
-  @include responsive(tablet) {
-   // margin-inline-end: clamp(1.5rem, 0.786rem + 3.57vw, 2.5rem);
-
   }
 }
 .nav-list__item__link {
@@ -301,7 +288,6 @@ body {
   padding-block-start: 30px;
 }
 .nav-list.active {
-  // display: flex;
   flex-direction: column;
   align-items: self-start ;
 
@@ -317,14 +303,10 @@ body {
 .nav-list__item.active {
   margin-block-end: 20px;
 }
-// .header__burger__line.active {
-  
-// }
+
 .header__search {
   border: none;
   background-color: transparent;
-
-  //margin-inline-end: clamp(3.125rem, 2.083rem + 2.17vw, 4.688rem); // 1920 - 768
 
   margin-inline-start: 0px;
 
@@ -456,7 +438,6 @@ body {
 
 .hero__button-order {
   position: absolute;
-  //$width, $height, $background-color, $border, $border-radius, $font-size, $color
   @include btn-style(280px, 78px, $default-yellow, none, 16px, 24px, $white);
 
   @include responsive(desktop) { // 1920 - 1024
