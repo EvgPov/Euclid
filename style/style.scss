@@ -396,6 +396,7 @@ body {
 
 .hero_title {
     position: absolute;
+    pointer-events: none;
     //$font-size, $color, $align
     @include responsive(desktop) {
       @include text-style(clamp(3.75rem, 3.036rem + 1.12vw, 4.375rem), $white, left);
@@ -418,6 +419,7 @@ body {
   
 .hero_subtitle {
   position: absolute;
+  pointer-events: none;
   @include text-style(clamp(1.125rem, 0.875rem + 0.52vw, 1.5rem), $white, left);
   @include responsive(desktop) {
     top: calc(322px + (294 - 322) * (100vw - 1024px) / (1920 - 1024));
@@ -438,6 +440,7 @@ body {
 
 .hero__button-order {
   position: absolute;
+  pointer-events: none;
   @include btn-style(280px, 78px, $default-yellow, none, 16px, 24px, $white);
 
   @include responsive(desktop) { // 1920 - 1024

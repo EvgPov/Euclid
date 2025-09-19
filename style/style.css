@@ -641,6 +641,7 @@ body {
 
 .hero_title {
   position: absolute;
+  pointer-events: none;
 }
 @media (max-width: 1920px) {
   .hero_title {
@@ -677,6 +678,7 @@ body {
 
 .hero_subtitle {
   position: absolute;
+  pointer-events: none;
   margin: 0;
   font-size: clamp(1.125rem, 0.875rem + 0.52vw, 1.5rem);
   color: #FFFFFF;
@@ -709,6 +711,7 @@ body {
 
 .hero__button-order {
   position: absolute;
+  pointer-events: none;
   width: 280px;
   height: 78px;
   background-color: #FF9900;
