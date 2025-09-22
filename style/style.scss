@@ -110,6 +110,11 @@ $slide-3: '../img/hero-pic-1920-3.png';
 }
 // media
 @mixin responsive ($breakpoint) {
+   @if $breakpoint == desktop {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  } 
   // desktop
   @if $breakpoint == desktop {
     @media (max-width: 1920px) {
