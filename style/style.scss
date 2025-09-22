@@ -110,7 +110,7 @@ $slide-3: '../img/hero-pic-1920-3.png';
 }
 // media
 @mixin responsive ($breakpoint) {
-   @if $breakpoint == desktop {
+   @if $breakpoint == over-desktop {
     @media (min-width: 1920px) {
       @content;
     }
@@ -183,6 +183,9 @@ body {
     border-bottom-left-radius: $img-border-radius;
     border-bottom-right-radius: $img-border-radius; 
   // $width, $height
+  @include responsive(over-desktop) {
+    @include section-size(1920px, 100px);   // более 1920
+  }
   @include responsive(desktop) {
     @include section-size(100%, 100px);   // 1920 - 1024
   }
@@ -199,6 +202,9 @@ body {
 }
 .header__logo {
   //$width, $height, $left
+  @include responsive(over-desktop) { // более 1920
+    @include logo-style(225px, 72px, 75px);
+  }
   @include responsive(desktop) { // 1920 - 1024
     @include logo-style(clamp(9.375rem, 4.018rem + 8.37vw, 14.063rem),
                         clamp(3rem, 1.286rem + 2.68vw, 4.5rem),
@@ -230,6 +236,10 @@ body {
   }  
 }
 .nav-list {
+  @include responsive(over-desktop) { // более 1920
+    // $left, $font-size)
+    @include nav-list-style(821px, 18px);
+  }
   @include responsive(desktop) { // 1920 - 1024
     // $left, $font-size)
     @include nav-list-style(clamp(6.563rem, -44.295rem + 79.46vw, 51.063rem), clamp(1rem, 0.857rem + 0.22vw, 1.125rem));
@@ -241,10 +251,13 @@ body {
 }
 .nav-list__item {
     // отступ от каждого пункта меню справа
-  @include responsive(desktop) {
+  @include responsive(over-desktop) { // более 1920
+    margin-inline-end: 85px;
+  }
+  @include responsive(desktop) { // 1920 - 1024
     margin-inline-end: clamp(3.75rem, 1.964rem + 2.79vw, 5.313rem);
   }
-  @include responsive(laptop) {
+  @include responsive(laptop) { // 1024 - 768
     margin-inline-end: clamp(2.5rem, -1.25rem + 7.81vw, 3.75rem);
   }
 }
@@ -315,6 +328,10 @@ body {
 
   margin-inline-start: 0px;
 
+  @include responsive(over-desktop) { // более 1920
+    margin-inline-start: 85px;
+    margin-inline-end: 75px;
+  }
   @include responsive(desktop) {
     margin-inline-start: calc(45px + (0 - 45) * (100vw - 1024px) / (1920 - 1024)); // 1024 - 1920
     margin-inline-end: clamp(3.125rem, 2.083rem + 2.17vw, 4.688rem); // 1920 - 768
@@ -364,6 +381,12 @@ body {
 // HERO
 
 .swiper {
+  @include responsive(over-desktop) { // более 1920
+    // $width, $height, $border-radius
+    @include fill-container (1770px, 620px, $img-border-radius);
+   // $position, $top, $left, $z-index
+    @include position (none, 50px, 0, 0);
+  }
     @include responsive(desktop) { // 1920 - 1024
     // $url, $width, $height, $border-radius
     @include fill-container (clamp(57.75rem, -2.679rem + 94.42vw, 110.625rem),
@@ -403,19 +426,25 @@ body {
     position: absolute;
     pointer-events: none;
     //$font-size, $color, $align
-    @include responsive(desktop) {
+     @include responsive(over-desktop) { // более 1920
+      @include text-style(70px, $white, left);
+      top: 100px;
+      left: 80px;
+      z-index: 1;
+    }
+    @include responsive(desktop) { // 1920 - 1024
       @include text-style(clamp(3.75rem, 3.036rem + 1.12vw, 4.375rem), $white, left);
       top: calc(160px + (100 - 160) * (100vw - 768px) / (1920 - 768));
       left: clamp(2.5rem, 0.833rem + 3.47vw, 5rem);
       z-index: 1;
     }
-    @include responsive(laptop) {
+    @include responsive(laptop) { // 1024 - 768
       @include text-style(clamp(3.125rem, 1.25rem + 3.91vw, 3.75rem), $white, left);
       top: calc(160px + (100 - 160) * (100vw - 768px) / (1920 - 768));
       left: clamp(2.5rem, 0.833rem + 3.47vw, 5rem);
       z-index: 1;
     }
-    @include responsive(tablet) {
+    @include responsive(tablet) { // 768 - 320
       @include text-style(clamp(1.25rem, -0.089rem + 6.7vw, 3.125rem), $white, center);
       top: clamp(3.75rem, -0.714rem + 22.32vw, 10rem);
       z-index: 1;
@@ -425,18 +454,26 @@ body {
 .hero_subtitle {
   position: absolute;
   pointer-events: none;
+   //$font-size, $color, $align
   @include text-style(clamp(1.125rem, 0.875rem + 0.52vw, 1.5rem), $white, left);
-  @include responsive(desktop) {
+  @include responsive(over-desktop) { // более 1920
+    @include text-style(24px, $white, left);
+    top: 294px;
+    left: 80px;
+    z-index: 1;
+  }
+
+  @include responsive(desktop) { // 1920 - 1024
     top: calc(322px + (294 - 322) * (100vw - 1024px) / (1920 - 1024));
     left: clamp(2.5rem, 0.833rem + 3.47vw, 5rem);
     z-index: 1;
   }
-  @include responsive(laptop) {
+  @include responsive(laptop) { // 1024 - 768
     top: clamp(18.625rem, 14.125rem + 9.38vw, 20.125rem);
     left: clamp(2.5rem, 0.833rem + 3.47vw, 5rem);
     z-index: 1;
   }
-  @include responsive(tablet) {
+  @include responsive(tablet) { // 768 - 320
       @include text-style(clamp(0.75rem, 0.482rem + 1.34vw, 1.125rem), $white, center);
       top: clamp(7.188rem, -0.982rem + 40.85vw, 18.625rem);
       z-index: 1;
@@ -448,6 +485,11 @@ body {
   pointer-events: none;
   @include btn-style(280px, 78px, $default-yellow, none, 16px, 24px, $white);
 
+  @include responsive(over-desktop) { // 1920 - 1024
+    top: clamp(26.875rem, 26.018rem + 1.34vw, 27.625rem);
+    left: clamp(4.813rem, 4.598rem + 0.33vw, 5rem);
+    z-index: 1;
+  }
   @include responsive(desktop) { // 1920 - 1024
     top: clamp(26.875rem, 26.018rem + 1.34vw, 27.625rem);
     left: clamp(4.813rem, 4.598rem + 0.33vw, 5rem);

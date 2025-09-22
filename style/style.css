@@ -347,7 +347,7 @@ body {
 }
 @media (min-width: 1920px) {
   .header {
-    width: 100%;
+    width: 1920px;
     height: 100px;
   }
 }
@@ -376,9 +376,9 @@ body {
 
 @media (min-width: 1920px) {
   .header__logo {
-    width: clamp(9.375rem, 4.018rem + 8.37vw, 14.063rem);
-    height: clamp(3rem, 1.286rem + 2.68vw, 4.5rem);
-    margin-inline-start: clamp(3.125rem, 1.339rem + 2.79vw, 4.688rem);
+    width: 225px;
+    height: 72px;
+    margin-inline-start: 75px;
     object-fit: cover;
     padding: 0;
   }
@@ -436,10 +436,10 @@ body {
     align-items: none;
     margin: 0px;
     padding: 0px;
-    margin-inline-start: clamp(6.563rem, -44.295rem + 79.46vw, 51.063rem);
+    margin-inline-start: 821px;
     text-decoration: none;
     list-style-type: none;
-    font-size: clamp(1rem, 0.857rem + 0.22vw, 1.125rem);
+    font-size: 18px;
   }
 }
 @media (max-width: 1920px) {
@@ -473,7 +473,7 @@ body {
 
 @media (min-width: 1920px) {
   .nav-list__item {
-    margin-inline-end: clamp(3.75rem, 1.964rem + 2.79vw, 5.313rem);
+    margin-inline-end: 85px;
   }
 }
 @media (max-width: 1920px) {
@@ -560,8 +560,8 @@ body {
 }
 @media (min-width: 1920px) {
   .header__search {
-    margin-inline-start: calc(45px + -45 * (100vw - 1024px) / 896);
-    margin-inline-end: clamp(3.125rem, 2.083rem + 2.17vw, 4.688rem);
+    margin-inline-start: 85px;
+    margin-inline-end: 75px;
   }
 }
 @media (max-width: 1920px) {
@@ -618,11 +618,11 @@ body {
 
 @media (min-width: 1920px) {
   .swiper {
-    width: clamp(57.75rem, -2.679rem + 94.42vw, 110.625rem);
-    height: calc(668px + -48 * (100vw - 1024px) / 896);
+    width: 1770px;
+    height: 620px;
     border-radius: 32px;
     position: none;
-    margin-block-start: clamp(2.5rem, 1.786rem + 1.12vw, 3.125rem);
+    margin-block-start: 50px;
     margin-inline-start: 0;
     z-index: 0;
   }
@@ -697,11 +697,11 @@ body {
 @media (min-width: 1920px) {
   .hero_title {
     margin: 0;
-    font-size: clamp(3.75rem, 3.036rem + 1.12vw, 4.375rem);
+    font-size: 70px;
     color: #FFFFFF;
     text-align: left;
-    top: calc(160px + -60 * (100vw - 768px) / 1152);
-    left: clamp(2.5rem, 0.833rem + 3.47vw, 5rem);
+    top: 100px;
+    left: 80px;
     z-index: 1;
   }
 }
@@ -748,8 +748,12 @@ body {
 }
 @media (min-width: 1920px) {
   .hero_subtitle {
-    top: calc(322px + -28 * (100vw - 1024px) / 896);
-    left: clamp(2.5rem, 0.833rem + 3.47vw, 5rem);
+    margin: 0;
+    font-size: 24px;
+    color: #FFFFFF;
+    text-align: left;
+    top: 294px;
+    left: 80px;
     z-index: 1;
   }
 }
