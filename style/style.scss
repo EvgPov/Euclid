@@ -252,7 +252,7 @@ body {
 .nav-list__item {
     // отступ от каждого пункта меню справа
   @include responsive(over-desktop) { // более 1920
-    margin-inline-end: 85px;
+    margin-inline-end: 83px;
   }
   @include responsive(desktop) { // 1920 - 1024
     margin-inline-end: clamp(3.75rem, 1.964rem + 2.79vw, 5.313rem);
@@ -329,7 +329,8 @@ body {
   margin-inline-start: 0px;
 
   @include responsive(over-desktop) { // более 1920
-    margin-inline-start: 85px;
+    //margin-inline-start: 85px;
+    margin-inline-start: 0px;
     margin-inline-end: 75px;
   }
   @include responsive(desktop) {

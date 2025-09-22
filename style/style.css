@@ -473,7 +473,7 @@ body {
 
 @media (min-width: 1920px) {
   .nav-list__item {
-    margin-inline-end: 85px;
+    margin-inline-end: 83px;
   }
 }
 @media (max-width: 1920px) {
@@ -560,7 +560,7 @@ body {
 }
 @media (min-width: 1920px) {
   .header__search {
-    margin-inline-start: 85px;
+    margin-inline-start: 0px;
     margin-inline-end: 75px;
   }
 }
